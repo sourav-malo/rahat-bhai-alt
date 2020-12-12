@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #F4F2F2;
+  display: flex;
+}
+
+.left-container,
+.right-container {
+  flex-basis: 50%;
+}
+
+.left-container {
+  position: relative;
+}
+
+.sign-in-form {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -5rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 6rem 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-heading {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #048D97;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.username-box {
+  margin-bottom: 2rem;
+}
+
+.password-box {
+  position: relative;
+}
+
+.del-char-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sign-in-imp {
+  font-size: 1.6rem;
+  text-align: center;
+  width: 100%;
+  padding: .8rem .5rem;
+  border: none;
+  outline: none;
+  border-left: .8rem solid #048D97;
+  border-radius: .6rem;
+  background-color: #F4F2F2;
+}
+
+.sign-in-imp.password {
+  pointer-events: none;
+}
+
+.gui-pass-items {
+  margin: 2rem 0;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gui-pass-item {
+  background-color: #F4F2F2;
+  padding: 1rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: .6rem;
+  cursor: pointer;
+}
+
+.gui-pass-item.bordered {
+  border: .2rem solid #048D97;
+}
+
+.gui-pass-item span {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.sign-in-btn {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: #048D97;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: .6rem;
+  transition: .3s width ease-in-out;
+}
+
+.sign-in-btn:hover {
+  width: 120%;
+  cursor: pointer;
+}
+
+.response-msg-container {
+  text-align: center;
+}
+
+.response-msg {
+  display: inline-block;
+  margin-top: 4rem;
+  font-size: 1.4rem;
+}
+
+.response-msg.success {
+  color: green;
+}
+
+.response-msg.failure {
+  color: red;
+}
+
+.right-container {
+  background: url('../img/welcome-bg.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-text {
+  position: relative;
+  font-size: 5rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 10rem;
+  letter-spacing: .2rem;
+}
+
+.welcome-text::before {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: .5rem;
+  border-radius: .5rem;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -2.5rem;
+}
